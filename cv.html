@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Trực tuyến | Nguyễn Thành Tiến</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fdf6e3;
+        color: #584c27;
+      }
+      .vintage-accent {
+        color: #b58900;
+      }
+      .vintage-bg-accent {
+        background-color: #b58900;
+      }
+      .pdf-viewer {
+        width: 100%;
+        height: calc(100vh - 250px);
+        min-height: 600px;
+        border: 1px solid #eee8d5;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <nav class="bg-[#fdf6e3] shadow-sm border-b border-yellow-200/50 py-4 px-6">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-[#584c27] hover:text-[#b58900] transition font-bold uppercase tracking-widest text-sm"
+        >
+          <i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ
+        </a>
+        <span class="text-xl font-bold vintage-accent">CV TRỰC TUYẾN</span>
+      </div>
+    </nav>
+
+    <main class="flex-grow max-w-5xl mx-auto w-full px-6 py-10">
+      <div
+        class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4"
+      >
+        <div>
+          <h1 class="text-3xl font-bold text-[#584c27]">Nguyễn Thành Tiến</h1>
+          <p class="text-[#b58900] italic">
+            Sinh viên Kỹ thuật Phần mềm - ĐH Tôn Đức Thắng
+          </p>
+        </div>
+        <a
+          href="./cv.pdf"
+          download
+          class="vintage-bg-accent text-white px-6 py-3 rounded-md hover:bg-[#856404] transition flex items-center gap-2 shadow-md"
+        >
+          <i class="fa-solid fa-download"></i> TẢI XUỐNG PDF
+        </a>
+      </div>
+
+      <div class="bg-white p-2 rounded shadow-2xl border border-yellow-200">
+        <iframe src="./cv.pdf" class="pdf-viewer rounded" frameborder="0">
+          <div class="p-10 text-center">
+            <p class="mb-4">Trình duyệt không hỗ trợ xem trực tiếp.</p>
+            <a href="path/to/your/cv.pdf" class="text-blue-600 underline"
+              >Nhấn vào đây để tải về và xem hồ sơ.</a
+            >
+          </div>
+        </iframe>
+      </div>
+    </main>
+
+    <footer
+      class="py-6 bg-[#3d341a] text-[#b58900]/60 text-center text-xs uppercase tracking-widest"
+    >
+      <p>Liên hệ: nguyenthanhtien.id.vn@gmail.com</p>
+    </footer>
+  </body>
+</html>
