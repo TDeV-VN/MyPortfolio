@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nguyễn Thành Tiến | Portfolio</title>
+  <title>Nguyễn Thành Tiến | Premium Portfolio</title>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B82GKKT8S5"></script>
   <script>
@@ -425,12 +425,12 @@
   <div class="nav-container">
     <nav>
       <a href="#" class="nav-brand"><span></span> TDeV</a>
-      <a href="#about" class="nav-link">Về tôi</a>
-      <a href="#projects" class="nav-link">Dự án</a>
-      <a href="./cv.html" class="nav-link" style="color: var(--color-text-main);">Hồ sơ</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="./cv.html" class="nav-link" style="color: var(--color-text-main);">Resume</a>
       <div style="width: 1px; height: 16px; background: var(--glass-border); margin: 0 0.2rem;"></div>
-      <a href="index.html" class="nav-link" style="color: var(--color-accent); font-weight: 700;">VI</a>
-      <a href="index_en.html" class="nav-link">EN</a>
+      <a href="index.html" class="nav-link">VI</a>
+      <a href="index_en.html" class="nav-link" style="color: var(--color-accent); font-weight: 700;">EN</a>
     </nav>
   </div>
 
@@ -439,35 +439,37 @@
     <section class="hero">
       <h1 class="hero-title">Nguyễn <span>Thành Tiến</span></h1>
       <p class="hero-subtitle">
-        Lập trình viên Backend.
+        Software Engineer.
       </p>
 
       <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: center; margin-top: 1.5rem;">
         <div class="company-badge" style="margin-top: 0;">
           <i class="fa-solid fa-building" style="color: var(--color-accent);"></i>
-          Kỹ thuật @
-          <a href="https://ids.net.vn" target="_blank">Công ty Cổ phần Giải pháp IDS Việt Nam</a>
+          Engineering @
+          <a href="https://ids.net.vn" target="_blank">IDS Vietnam Solution Corporation</a>
         </div>
         <div class="company-badge" style="margin-top: 0;">
           <i class="fa-solid fa-cloud" style="color: var(--color-accent);"></i>
-          Sản phẩm @
+          Product @
           <a href="https://cloudbase.vn" target="_blank">cloudbase.vn</a>
         </div>
       </div>
 
       <div class="hero-cta" style="margin-top: 3rem;">
-        <a href="#projects" class="btn btn-primary">Xem dự án</a>
-        <a href="./cv.html" class="btn btn-secondary">Hồ sơ Điện tử <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="./cv.html" class="btn btn-secondary">Digital Dossier <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </section>
 
     <!-- ABOUT & SKILLS -->
     <section id="about">
-      <h2 class="section-header">Chuyên môn</h2>
+      <h2 class="section-header">Expertise</h2>
       <div class="grid-layout">
         <div class="glass-card about-card">
           <p style="font-size: 1.1rem; color: var(--color-text-main); margin-bottom: 1rem; max-width: 800px;">
-            Lập trình viên Backend (Junior) tại Công ty Cổ phần Giải pháp IDS Việt Nam. Có nền tảng vững chắc về Node.js/Express, tập trung xây dựng các hệ thống đáng tin cậy. Luôn đề cao sự chuyên nghiệp, trách nhiệm và không ngừng học hỏi công nghệ mới. (Kỹ thuật Phần mềm, TDTU).
+            Junior Backend Developer at IDS Vietnam Solution Corporation. I have a strong foundation in Node.js/Express and focus on
+            building reliable systems. I value professionalism, take responsibility for my work, and continuously learn
+            new technologies. (Software Engineering, TDTU).
           </p>
           <div class="skills-container">
             <span class="skill-tag">Express.js</span>
@@ -484,48 +486,51 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-      <h2 class="section-header">Dự án tiêu biểu</h2>
+      <h2 class="section-header">Selected Work</h2>
       <div class="grid-layout">
 
         <div class="glass-card project-card">
-          <div class="project-year">10/2025 • Hạ tầng Backend</div>
-          <h3 class="project-title">Thiết kế Hệ thống Mở rộng</h3>
-          <p class="project-desc">Thiết kế và triển khai kiến trúc backend mở rộng sử dụng Docker và Redis/BullMQ để phân tách các service và xử lý hàng đợi ngầm.</p>
+          <div class="project-year">10/2025 • Backend Infrastructure</div>
+          <h3 class="project-title">Scalable System Design</h3>
+          <p class="project-desc">Designed and deployed a highly scalable backend architecture utilizing Docker and
+            Redis/BullMQ to decouple services and process background queues.</p>
           <div class="skills-container" style="margin-bottom: 2rem; margin-top: 0;">
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Docker</span>
             <span class="skill-tag">Redis</span>
           </div>
           <a href="https://github.com/TDeV-VN/midterm-nodejs-tdtu" target="_blank" class="project-link">
-            Xem mã nguồn <i class="fa-solid fa-arrow-right"></i>
+            View Source <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
 
         <div class="glass-card project-card">
           <div class="project-year">11/2025 • Microservices</div>
-          <h3 class="project-title">Thương mại điện tử Gear Up</h3>
-          <p class="project-desc">Hệ thống thương mại điện tử đa dịch vụ xây dựng với Next.js và kiến trúc microservice. Các tính năng thời gian thực sử dụng Socket.IO.</p>
+          <h3 class="project-title">Gear Up E-Commerce</h3>
+          <p class="project-desc">A multi-service e-commerce system built with Next.js and a microservice-oriented
+            architecture. Real-time features powered by Socket.IO.</p>
           <div class="skills-container" style="margin-bottom: 2rem; margin-top: 0;">
             <span class="skill-tag">Next.js</span>
             <span class="skill-tag">Express</span>
             <span class="skill-tag">Socket.IO</span>
           </div>
           <a href="https://github.com/TDeV-VN/tdtu-nodejs-ecommerce" target="_blank" class="project-link">
-            Xem mã nguồn <i class="fa-solid fa-arrow-right"></i>
+            View Source <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
 
         <div class="glass-card project-card">
-          <div class="project-year">10/2025 • Nhúng & IoT</div>
-          <h3 class="project-title">Hệ thống EVPS</h3>
-          <p class="project-desc">Hệ thống ưu tiên xe cứu thương tại các giao lộ sử dụng ESP32, ESP-NOW và MQTT để tối ưu thời gian phản hồi.</p>
+          <div class="project-year">10/2025 • Embedded & IoT</div>
+          <h3 class="project-title">EVPS System</h3>
+          <p class="project-desc">Emergency vehicle priority system at intersections using ESP32, ESP-NOW, and MQTT for
+            optimized response times.</p>
           <div class="skills-container" style="margin-bottom: 2rem; margin-top: 0;">
             <span class="skill-tag">ESP32</span>
             <span class="skill-tag">MQTT</span>
             <span class="skill-tag">C++</span>
           </div>
           <a href="https://github.com/TDeV-VN/EVPS-PublicPreview.git" target="_blank" class="project-link">
-            Xem mã nguồn <i class="fa-solid fa-arrow-right"></i>
+            View Source <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
 
@@ -543,7 +548,7 @@
           class="fa-solid fa-envelope"></i></a>
     </div>
     <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-      &copy; 2026 Nguyễn Thành Tiến. Đã đăng ký bản quyền.
+      &copy; 2026 Nguyễn Thành Tiến. All rights reserved.
     </p>
   </footer>
 </body>

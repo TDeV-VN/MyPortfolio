@@ -1,97 +1,404 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Trực tuyến | Nguyễn Thành Tiến</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #fdf6e3;
-        color: #584c27;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Thành Tiến | Digital Dossier</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B82GKKT8S5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-B82GKKT8S5");
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;700;800&family=JetBrains+Mono&display=swap');
+
+    :root {
+      --color-bg: #050505;
+      --color-bg-mesh: radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.1), rgba(0, 0, 0, 0) 50%);
+      --color-text-main: #f8fafc;
+      --color-text-muted: #94a3b8;
+
+      --color-accent: #f97316;
+      --color-accent-glow: rgba(249, 115, 22, 0.4);
+      --color-accent-gradient: linear-gradient(135deg, #f97316, #ef4444);
+
+      --glass-bg: rgba(255, 255, 255, 0.02);
+      --glass-border: rgba(255, 255, 255, 0.05);
+      --glass-hover: rgba(255, 255, 255, 0.04);
+      --glass-border-hover: rgba(249, 115, 22, 0.3);
+
+      --font-sans: 'Inter', sans-serif;
+      --font-display: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      background-image: var(--color-bg-mesh);
+      background-attachment: fixed;
+      color: var(--color-text-main);
+      line-height: 1.6;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Floating Nav */
+    .nav-container {
+      position: fixed;
+      top: 2rem;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    nav {
+      pointer-events: auto;
+      background: rgba(10, 10, 10, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8);
+    }
+
+    .nav-link {
+      font-family: var(--font-display);
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-text-main);
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-text-main);
+      font-family: var(--font-display);
+      font-weight: 700;
+      text-decoration: none;
+      padding-right: 1rem;
+      border-right: 1px solid var(--glass-border);
+      transition: color 0.3s;
+    }
+
+    .btn-back:hover {
+      color: var(--color-accent);
+    }
+
+    /* Dossier Layout */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10rem 2rem 4rem;
+    }
+
+    .dossier-header {
+      margin-bottom: 4rem;
+    }
+
+    .dossier-label {
+      font-family: var(--font-mono);
+      color: var(--color-accent);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Glass Info Blocks */
+    .glass-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+    }
+
+    .glass-card:hover {
+      border-color: var(--glass-border-hover);
+      background: var(--glass-hover);
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    h2 i {
+      color: var(--color-accent);
+      font-size: 1.2rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem 1rem;
+      font-size: 1.05rem;
+    }
+
+    .info-label {
+      color: var(--color-text-muted);
+      font-family: var(--font-sans);
+    }
+
+    .info-value {
+      color: var(--color-text-main);
+      font-weight: 500;
+    }
+
+    .info-value a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .info-value a:hover {
+      opacity: 0.8;
+    }
+
+    /* Skills list inside Dossier */
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .skill-tag {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+      background: rgba(249, 115, 22, 0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      color: var(--color-text-main);
+    }
+
+    /* CTA Action */
+    .action-row {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .btn-primary {
+      font-family: var(--font-display);
+      font-weight: 700;
+      padding: 1.2rem 2.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--color-accent-gradient);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--color-accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px var(--color-accent-glow);
+    }
+
+    /* Custom Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-left: 4px solid var(--color-accent);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      transform: translateX(120%);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 100;
+      max-width: 350px;
+    }
+
+    .toast.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .toast-icon {
+      color: var(--color-accent);
+      font-size: 1.5rem;
+    }
+
+    .toast-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.2rem;
+      font-size: 1.05rem;
+    }
+
+    .toast-message {
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        top: 1rem;
       }
-      .vintage-accent {
-        color: #b58900;
+
+      main {
+        padding-top: 8rem;
       }
-      .vintage-bg-accent {
-        background-color: #b58900;
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
       }
-      .pdf-viewer {
-        width: 100%;
-        height: calc(100vh - 250px);
-        min-height: 600px;
-        border: 1px solid #eee8d5;
-        overflow: auto; /* Ensure scrolling is enabled */
+
+      .info-grid>div:nth-child(even) {
+        margin-bottom: 1rem;
       }
-    </style>
-  </head>
-  <body class="flex flex-col min-h-screen">
-    <nav class="bg-[#fdf6e3] shadow-sm border-b border-yellow-200/50 py-4 px-6">
-      <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <a
-          href="index.html"
-          class="flex items-center gap-2 text-[#584c27] hover:text-[#b58900] transition font-bold uppercase tracking-widest text-sm"
-        >
-          <i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ
-        </a>
-        <span class="text-xl font-bold vintage-accent">CV TRỰC TUYẾN</span>
-      </div>
+
+      .glass-card {
+        padding: 1.5rem;
+      }
+      .toast {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav-container">
+    <nav>
+      <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Home</a>
+      <span class="nav-link" style="color: var(--color-text-main);">Digital Dossier</span>
     </nav>
+  </div>
 
-    <main class="flex-grow max-w-5xl mx-auto w-full px-6 py-10">
-      <div
-        class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4"
-      >
-        <div>
-          <h1 class="text-3xl font-bold text-[#584c27]">Nguyễn Thành Tiến</h1>
-          <p class="text-[#b58900] italic">
-            Sinh viên Kỹ thuật Phần mềm - ĐH Tôn Đức Thắng
-          </p>
+  <main>
+    <div class="dossier-header">
+      <div class="dossier-label">Status: Active // Clearance: Public</div>
+      <h1>Digital Dossier</h1>
+    </div>
+
+    <div class="glass-card">
+      <h2><i class="fa-regular fa-id-badge"></i> General Information</h2>
+      <div class="info-grid">
+        <div class="info-label">Operative Name</div>
+        <div class="info-value">Nguyễn Thành Tiến</div>
+
+        <div class="info-label">Primary Role</div>
+        <div class="info-value">Software Engineer</div>
+
+        <div class="info-label">Organization</div>
+        <div class="info-value"><a href="https://ids.net.vn" target="_blank">IDS Vietnam Solution Corporation</a></div>
+
+        <div class="info-label">Education</div>
+        <div class="info-value">Software Engineering, TDTU</div>
+
+        <div class="info-label">Comm Link</div>
+        <div class="info-value"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=nguyenthanhtien.id.vn@gmail.com" target="_blank">nguyenthanhtien.id.vn@gmail.com</a>
         </div>
-        <a
-          href="https://drive.google.com/uc?export=download&id=1DIvIaTcGASHE_vPbrPVLdPh-Yz6qa5gV"
-          download
-          class="vintage-bg-accent text-white px-6 py-3 rounded-md hover:bg-[#856404] transition flex items-center gap-2 shadow-md"
-        >
-          <i class="fa-solid fa-download"></i> TẢI XUỐNG PDF
-        </a>
       </div>
+    </div>
 
-      <div class="bg-white p-2 rounded shadow-2xl border border-yellow-200">
-        <iframe
-          src="https://drive.google.com/file/d/1DIvIaTcGASHE_vPbrPVLdPh-Yz6qa5gV/preview"
-          class="pdf-viewer rounded"
-          frameborder="0"
-          allow="autoplay"
-        ></iframe>
+    <div class="glass-card">
+      <h2><i class="fa-solid fa-layer-group"></i> Technical Arsenal</h2>
+      <div class="skill-list">
+        <span class="skill-tag">Express.js</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Redis / BullMQ</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git / Jira</span>
+        <span class="skill-tag">Figma / UML</span>
+        <span class="skill-tag">English (B2)</span>
       </div>
-    </main>
+    </div>
 
-    <footer
-      class="py-6 bg-[#3d341a] text-[#b58900]/60 text-center text-xs uppercase tracking-widest"
-    >
-      <p>Liên hệ: nguyenthanhtien.id.vn@gmail.com</p>
-    </footer>
+    <div class="action-row">
+      <a href="#" onclick="showToast(); return false;" class="btn-primary">
+        <i class="fa-solid fa-cloud-arrow-down"></i> Extract Official Resume
+      </a>
+    </div>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-B82GKKT8S5"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  </main>
 
-      gtag("config", "G-B82GKKT8S5");
-    </script>
-  </body>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <div class="toast-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+    <div class="toast-content">
+      <div class="toast-title">Access Denied</div>
+      <div class="toast-message">Tính năng tải CV đang tạm thời bị khóa để cập nhật bản mới nhất. Vui lòng quay lại sau!</div>
+    </div>
+  </div>
+
+  <script>
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
+    }
+  </script>
+
+</body>
+
 </html>
